@@ -20,13 +20,12 @@
             <div class="flex items-center space-x-4 text-sm">
                 <a href="{% url 'dashboard' %}" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-md transition">Dashboard & Knowledge Base</a>
                 <span class="bg-emerald-900/60 border border-emerald-500/40 text-emerald-300 px-3 py-1 rounded-full text-xs">
-                    🔒 Zero-Training Privacy Active
+                    Local rule-based scan
                 </span>
             </div>
         </div>
     </nav>
 
-    <!-- Flash Notifications -->
     <div class="max-w-7xl mx-auto w-full px-6 mt-4">
         {% if messages %}
             {% for message in messages %}
@@ -37,14 +36,12 @@
         {% endif %}
     </div>
 
-    <!-- Main Content -->
     <main class="max-w-7xl mx-auto w-full px-6 py-6 flex-grow">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-4 px-6 text-center text-xs text-slate-500">
-        Built by <strong>Team VORTEX Ti</strong>: Mohamed Imran Hashim M (Lead) • Nithish Kumar K • Mohammed Niyas • Naveen M
+        Built by <strong>Team VORTEX Ti</strong>: Mohamed Imran Hashim M • Nithish Kumar K • Mohammed Niyas • Naveen M
     </footer>
 </body>
 </html>

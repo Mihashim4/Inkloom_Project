@@ -15,7 +15,7 @@ def seed_default_brand_knowledge_base():
         {
             "rule_code": "FACT-01",
             "title": "Unsupported 100% / Instant Cure or Guarantee Claims",
-            "category": "Facts & Claims",
+            "category": "FACT",
             "severity": "HIGH",
             "forbidden_pattern": "100% guaranteed,instant results,zero risk, #1 in the world",
             "approved_replacement": "clinically backed results for up to 89% of users (2026 study)",
@@ -25,7 +25,7 @@ def seed_default_brand_knowledge_base():
         {
             "rule_code": "TERM-02",
             "title": "Outdated Pricing & Legacy Product Naming",
-            "category": "Terminology",
+            "category": "TERM",
             "severity": "HIGH",
             "forbidden_pattern": "$19/month,Rs. 499,Inkloom Basic,old logo",
             "approved_replacement": "$29/month (Pro Tier) using the 2026 Brand Kit",
@@ -35,7 +35,7 @@ def seed_default_brand_knowledge_base():
         {
             "rule_code": "TONE-01",
             "title": "Aggressive / Fear-Mongering Urgency Language",
-            "category": "Tone & Voice",
+            "category": "TONE",
             "severity": "MEDIUM",
             "forbidden_pattern": "buy now or regret forever,last chance ever,don't be stupid,hurry up",
             "approved_replacement": "Explore how our workflow fits your team's schedule",
@@ -45,7 +45,7 @@ def seed_default_brand_knowledge_base():
         {
             "rule_code": "POLICY-03",
             "title": "Confidential Internal Code Names & PII Leakage",
-            "category": "Confidentiality & Policy",
+            "category": "POLICY",
             "severity": "HIGH",
             "forbidden_pattern": "project titan,internal-only,confidential roadmap",
             "approved_replacement": "[REDACTED — Public Release Version]",
@@ -109,7 +109,7 @@ def run_pre_publication_governance_scan(submission):
             flagged_snippet=f"Off-Brand Color HEX: {hex_val}",
             guideline_citation=f"Section 3.1 Visual Identity: Only approved primary palette {APPROVED_BRAND_HEX} is permitted.",
             why_it_matters="Off-brand colors break visual recognition across regional agencies and social feeds.",
-            suggested_fix="#2563EB (Brand Royal Blue) or #0F172A (Slate Ink)",
+            suggested_fix="#2563EB",
             confidence_score=0.98,
             requires_human_escalation=False,
         )
